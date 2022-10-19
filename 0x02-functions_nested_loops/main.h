@@ -1,2 +1,2 @@
-putchar('_');
-void print_alphabet(void);
+_putchar('_');
+void print_alphabet(void):;
