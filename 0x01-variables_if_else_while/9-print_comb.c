@@ -1,8 +1,6 @@
 #include <stdio.h>
-
 /**
  * main - prints possible combinations of sigle-digit num
- *
  * Return: 0
 */
 int main(void)
@@ -17,6 +15,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+	}
 	putchar('\n');
 	return (0);
 }
