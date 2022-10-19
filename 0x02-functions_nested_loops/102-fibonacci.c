@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	int i, j, k, l;
+	int i, j, k, next;
 
 	j = 1;
 
@@ -16,14 +16,14 @@ int main(void)
 	{
 		if (j != 2036501104)
 		{
-			printf("%ld, ", j);
+			printf("%lu, ", j);
 		} else
 		{
-			printf("%d\n", j);
+			printf("%dlu\n", j);
 		}
-		l = j + k;
+		next = j + k;
 		j = k;
-		k = l;
+		k = next;
 	}
 	return (0);
 }
