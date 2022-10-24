@@ -3,8 +3,9 @@
 
 /**
  * main - prints the numbers from 1 to 100, followed by a new line
- * but for multiples of three prints Fizz instead of the number
- * and for multiples of five pribts Buzz
+ * but for multiples of three prints Fizz instead of the number,
+ * for multiples of five prints Buzz,
+ * for numbers which are multiples of both three and five print FizzBuzz
  * Return: Always 0 (Success)
 */
 int main(void)
