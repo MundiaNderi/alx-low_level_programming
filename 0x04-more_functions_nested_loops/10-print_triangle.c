@@ -5,11 +5,10 @@
 */
 void print_triangle(int size)
 {
-	int size;
 
 	if (size <= 0)
 	{
-		_putchar('\n')
+		_putchar('\n');
 	}
 	else
 	{
@@ -21,7 +20,7 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			for (j = 1; j <= 9 j++)
+			for (j = 1; j <= 9; j++)
 			{
 				_putchar('#');
 			}
