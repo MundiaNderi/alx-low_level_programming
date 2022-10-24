@@ -6,6 +6,7 @@
  * but for multiples of three prints Fizz instead of the number
  * and for multiples of five pribts Buzz
  * Return: Always 0 (Success)
+*/
 int main(void)
 {
 	int i;
@@ -17,7 +18,7 @@ int main(void)
 			printf(" Fizz");
 		} else if (i % 5 == 0 && i % 3 != 0)
 		{
-			printf(" Buzz"):
+			printf(" Buzz");
 		} else if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf(" FizzBuzz");
@@ -29,7 +30,7 @@ int main(void)
 			printf(" %d", i);
 		}
 	}
-	printf('\n');
+	printf("\n");
 
 	return (0);
 }
