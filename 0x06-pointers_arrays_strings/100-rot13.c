@@ -27,7 +27,7 @@ char *rot13(char *str)
 					'r', 's', 't', 'u', 'v', 'w',
 					'x', 'y', 'z', 'a', 'b', 'c',
 					'd', 'e', 'f', 'g', 'h', 'j',
-					'k', 'l', 'm',};
+					'k', 'l', 'm'};
 	while (str[indx1])
 	{
 		for (indx2 = 0; indx2 < 52; indx2++)
