@@ -3,44 +3,37 @@
 
 /**
 *str_concat - concatenates two strings.
-*@n: int type for size of byte
 *@s1: destination for concatenation.
 *@s2: source of string.
 *Return: pointer to new memory allocated.
 */
 char *str_concat(char *s1, char *s2)
 {
-	int count, count1;
-	char *ptr;
-	int len1, len2;
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (len1 = 0; s1[len1] != '\0'; len1++)
+	for (i = 0; s1[i] != '\0'; i++)
 		;
-	for (len2 = 0; s2[len2] != '\0'; len2++)
+	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	if (sign >= len2)
+	strout = malloc(sizeof(char) * (i + j + 1));
+	if (strout == NULL)
 	{
-		sign = len2;
-		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
-	}
-	else
-		ptr = malloc(sizeof(char) * (len1 + n + 1));
-	if (ptr == NULL)
+		free(strout);
 		return (NULL);
-	for (count = 0; count < sign; count1++)
-	{
-		ptr[count] = s1[count];
 	}
-	for (count1 = 0; count1 < len1; count++)
-	{
-		ptr[count++] = s2[count1];
-	}
-	ptr[count++] = '\0';
-	return (ptr);
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
+
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+
+	return (strout);
 }
