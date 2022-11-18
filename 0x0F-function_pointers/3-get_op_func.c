@@ -1,14 +1,14 @@
-#include <stdio.h>
 #include "3-calc.h"
-#include <string.h>
+#include <stddef.h>
 /**
 * get_op_func - selects the correct function to perfom the operation.
 * @s: the operator passed to the function.
-* Return: nothing
+* Return: one of the operator functions to perform calculations
 */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
+	op_t ops[] =
+	{
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -17,11 +17,11 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
-
 	i = 0;
+
 	while (i < 5)
 	{
-		if (strcm(s, ops[i].op == 0)
+		if (*s == *ops[i].op)
 			return (ops[i].f);
 		i++;
 	}
