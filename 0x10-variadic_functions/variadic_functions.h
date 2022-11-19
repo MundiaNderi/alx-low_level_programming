@@ -3,16 +3,17 @@
 #include <stdarg.h>
 #include <stdio.h>
 /*
-* struct check - parameters to check against.
-* @c: type
-* @f: the function to send it to
+* struct print - a new struct type defining our print
+* @symbol: our symbol representing the data type
+* @print_func: a function pointer that prints a data type
+* according to the symbol
 */
 typedef struct check
 {
-	char *chk;
-	void (*f)(va_list list);
+	char *symbol;
+	void (*print_func)(va_list arg);
 }
-check_t;
+func_printer;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
