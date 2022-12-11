@@ -8,31 +8,24 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	int len;
-	int fd, wr;
+	ssize_t fild = 0, chk = 0, i = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content == NULL)
-	{
-		fd = open(filename, O_WRONLY | O_CREAT, 0600);
-		if (fd == -1)
-			return (-1);
-	}
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-	if (fd == -1)
-		return (-1);
-	return (1);
+	if (!text_content)
+		text_content = "";
 
-	for (len = 0; text_content[len]; len++)
-	{}
-	wr = write(fd, text_content, len);
-	if (wr == -1)
-	{
-		close(fd);
+	fild = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 00600);
+	if (fild < 0)
 		return (-1);
-	}
-	close(fd);
+
+	while (text_content[i]
+		i++;
+	chk = write(fild, texy_content, i)
+	if (chk < 0)
+		return (-1);
+
+	close(fild);
 	return (1);
 }
