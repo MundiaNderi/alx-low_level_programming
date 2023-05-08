@@ -1,20 +1,47 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
+/**
+ * binary_search - searches for value in array using binary search
+ * @array: pointer to array to search
+ * @size: size of array
+ * @value: value to search for
+ * Return: index where @value is located
+ */
+
+int binary_search(int *array, size_t size, int value)
+{
+int low = 0;
+int high = size - 1;
+
+if (!array)
+return (-1);
+return (rec_bs(array, size, value, low, high));
+}
 
 /**
- * main - Entry point
- *
- * Return: Always EXIT_SUCCESS
+ * rec_bs - recursive function that finds value.
+ * @array: pointer to array to search
+ * @size: size of array
+ * @value: value to search for
+ * @low: low position
+ * @high: high position
+ * Return: index where value is located
  */
-int main(void)
-{
-    int array[] = {
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    size_t size = sizeof(array) / sizeof(array[0]);
 
-    printf("Found %d at index: %d\n\n", 2, binary_search(array, size, 2));
-    printf("Found %d at index: %d\n\n", 5, binary_search(array, 5, 5));
-    printf("Found %d at index: %d\n", 999, binary_search(array, size, 999));
-    return (EXIT_SUCCESS);
+int rec_bs(int *array, size_t size, int value, int low, int high)
+{
+int i;
+int mid = (high + low) / 2;
+
+printf("Searching in array: ");
+for (i = low; i < high; i++)
+printf("%d, ", array[i]);
+printf("%d\n", array[i]);
+if (array[mid] == value)
+return (mid)
+if (low == high)
+return (-1);
+if (array[mid] > value)
+return (rec_bs(array, size, value, low, mid - 1));
+else
+return (rec_bs(array, size, value, mid + 1, high));
 }
