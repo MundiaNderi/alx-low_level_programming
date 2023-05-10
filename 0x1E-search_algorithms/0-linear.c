@@ -15,7 +15,7 @@ if (!array)
 return (-1);
 while (i < size)
 {
-printf("Value checked array[%lu] = [%d]\n", array[i]);
+printf("Value checked array[%lu] = [%d]\n", i,  array[i]);
 if (array[i] != value)
 i++;
 else
