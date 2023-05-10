@@ -37,7 +37,7 @@ for (i = low; i < high; i++)
 printf("%d, ", array[i]);
 printf("%d\n", array[i]);
 if (array[mid] == value)
-return (mid)
+return (mid);
 if (low == high)
 return (-1);
 if (array[mid] > value)
