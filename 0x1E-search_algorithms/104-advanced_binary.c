@@ -3,7 +3,8 @@
 * advanced_binary - searches for value in an array using binary search.
 * @array: pointer to array to search
 * @size: size of array.
-* @value: index where @value is located.
+* @value: value to search for
+* Return: index where @value is located.
 */
 
 int advanced_binary(int *array, size_t size, int value)
