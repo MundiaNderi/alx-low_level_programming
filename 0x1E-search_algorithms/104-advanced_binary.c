@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
-* advanced binary - searches for value in an array using binary search.
+* advanced_binary - searches for value in an array using binary search.
 * @array: pointer to array to search
 * @size: size of array.
 * @value: index where @value is located.
